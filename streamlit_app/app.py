@@ -29,6 +29,7 @@ if uploaded_file is not None:
     # Predict
     prediction = model.predict(img_array)[0][0]
     label = "Normal" if prediction >= 0.5 else "Cataract"
+    confidence = prediction if prediction >= 0.5 else 1 - prediction
 
     st.subheader("Prediction:")
-    st.write(f"**{label}** (Confidence: {1 - prediction:.2f})")
+    st.write(f"**{label}** (Confidence: {confidence:.2f})")
