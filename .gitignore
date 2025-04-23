@@ -2,4 +2,5 @@ data/*
 mlruns/*
 logs/*
 *.h5
+!best_model.h5
 models/*
