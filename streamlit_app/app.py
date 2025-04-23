@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 
 # Load the trained model
-model = load_model('cataract_mobilnetv2_finetuned_classifier.h5')
+model = load_model('best_model.h5')
 
 # Constants
 IMG_HEIGHT, IMG_WIDTH = 128, 128  # Use the same dimensions as during training
