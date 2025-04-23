@@ -1,1 +1,5 @@
 data/*
+mlruns/*
+logs/*
+*.h5
+models/*
