@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/hiron/Desktop/Code/hackathon_efrei/models/mlruns/347784878878922393/d51fbbc10298406bbfc69619bfffb3ed/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '347784878878922393'
+lifecycle_stage: active
+run_id: d51fbbc10298406bbfc69619bfffb3ed
+run_name: Resnet_Model
+run_uuid: d51fbbc10298406bbfc69619bfffb3ed
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745396144787
+status: 1
+tags: []
+user_id: hiron

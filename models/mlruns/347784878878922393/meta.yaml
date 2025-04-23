@@ -1,0 +1,6 @@
+artifact_location: file:///c:/Users/hiron/Desktop/Code/hackathon_efrei/models/mlruns/347784878878922393
+creation_time: 1745396144619
+experiment_id: '347784878878922393'
+last_update_time: 1745396144619
+lifecycle_stage: active
+name: cnn_garbage_classification
