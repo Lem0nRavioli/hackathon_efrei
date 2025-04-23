@@ -4,32 +4,41 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 from PIL import Image
 
-# Load the trained model
+# load the trained model
 model = load_model('best_model.h5')
 
-# Constants
+# constants
 IMG_HEIGHT, IMG_WIDTH = 128, 128  # Use the same dimensions as during training
 
 st.title("Cataract Detection")
 st.write("Upload an eye image to predict if it shows signs of cataract.")
 
-# Upload image
+# upload image
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
-    # Display the image
+    # display the image
     img = Image.open(uploaded_file)
     st.image(img, caption="Uploaded Image", use_column_width=True)
 
-    # Preprocess
+    # preprocess
     img = img.resize((IMG_WIDTH, IMG_HEIGHT))
     img_array = image.img_to_array(img)
     img_array = np.expand_dims(img_array, axis=0) / 255.0  # Normalize
 
-    # Predict
+    # predict
     prediction = model.predict(img_array)[0][0]
-    label = "Normal" if prediction >= 0.5 else "Cataract"
-    confidence = prediction if prediction >= 0.5 else 1 - prediction
+
+    if prediction >= 0.7:
+        label = "Normal"
+    elif 0.4 <= prediction < 0.7:
+        label = "Cataract Suspicion"
+    else:
+        label = "Cataract"
+    
+    # label = "Normal" if prediction >= 0.5 else "Cataract"
+    # confidence = prediction if prediction >= 0.5 else 1 - prediction
 
     st.subheader("Prediction:")
-    st.write(f"**{label}** (Confidence: {confidence:.2f})")
+    st.write(f"**{label}** (Label: {prediction:.2f})")
+    st.write("_The closer to 1 the more confident the model about your cataract (or absence of, in case of closer to 0)._")
