@@ -4,9 +4,8 @@ pip install -r requirements.txt
 
 # train models
 
-python models/train_dense.py
-
-python models/train_cnn.py
+## run all cells in train_cnn_model.ipynb
+## run all cells in transfert_learning.ipynb
 
 # load tensorboard
 
