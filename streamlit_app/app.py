@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 
 # Load the trained model
-model = load_model('cataract_basic_classifier.h5')
+model = load_model('cataract_mobilnetv2_finetuned_classifier.h5')
 
 # Constants
 IMG_HEIGHT, IMG_WIDTH = 128, 128  # Use the same dimensions as during training
@@ -31,4 +31,4 @@ if uploaded_file is not None:
     label = "Normal" if prediction >= 0.5 else "Cataract"
 
     st.subheader("Prediction:")
-    st.write(f"**{label}** (Confidence: {prediction:.2f})")
+    st.write(f"**{label}** (Confidence: {1 - prediction:.2f})")
