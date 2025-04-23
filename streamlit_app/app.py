@@ -38,7 +38,8 @@ if uploaded_file is not None:
     
     # label = "Normal" if prediction >= 0.5 else "Cataract"
     # confidence = prediction if prediction >= 0.5 else 1 - prediction
+    confidence = 1 - prediction
 
     st.subheader("Prediction:")
-    st.write(f"**{label}** (Label: {prediction:.2f})")
+    st.write(f"**{label}** (Label: {confidence:.2f})")
     st.write("_The closer to 1 the more confident the model about your cataract (or absence of, in case of closer to 0)._")
