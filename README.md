@@ -9,7 +9,10 @@ This project implements a deep learning solution for detecting cataracts in eye 
 ├── data/                  # Dataset directory
 ├── notebooks/            # Jupyter notebooks for data exploration and model training
 │   └── cataract_data_exploration.ipynb
+│   └── XAI_v1.ipynb
 ├── streamlit_app/        # Web application for model deployment
+│   └── app_old.py        # old version
+│   └── app.py        # currently running streamlit app
 ├── train_cnn_model.ipynb # CNN model training notebook
 ├── transfert_learning.ipynb # Transfer learning model training notebook
 ├── best_model.h5         # Trained model weights
