@@ -1,9 +1,9 @@
 tensorflow
-numpy
 pandas
 matplotlib
 seaborn
 streamlit
 mlflow
-opencv-python
+numpy
+opencv-python-headless
 pillow
