@@ -1,0 +1,5 @@
+The models are currently trained with shuffled data.
+Meaning that the prediction 0 or 1 is randomly assigned.
+This is not the brightest move, agreed.
+Unless you wanna troll & confuse future students that will copy/pasta the project.
+Jk, i'm just too lazy to fix it since it's a mock project
