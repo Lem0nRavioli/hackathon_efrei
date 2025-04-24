@@ -107,8 +107,13 @@ if uploaded_file is not None:
 
     # Display prediction
     st.subheader("Prediction:")
-    st.write(f"**{label}** (Confidence: {confidence:.2f})")
+    st.write(f"====>**{label}**<====")
     st.write("_The closer to 1, the more confident the model is about the absence of cataract._")
+    
+    # Display prediction chain
+    st.subheader("Prediction Chain:")
+    st.write(f"**Your eye got a score of: {prediction:.2f}**")
+    st.write("_0 ---- Cataract ---- 0.4 ---- Cataract Suspicion ---- 0.7 ---- Normal ---- 1_")
 
     # Generate Grad-CAM image
     gradcam_img = generate_gradcam(img_resized, model)
