@@ -6,3 +6,4 @@ seaborn
 streamlit
 mlflow
 opencv-python
+pillow
